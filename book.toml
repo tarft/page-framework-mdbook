@@ -1,0 +1,7 @@
+[book]
+title = "Page framework"
+authors = ["Tara Kneisel"]
+language = "en"
+
+[build]
+build-dir = "./docs"
