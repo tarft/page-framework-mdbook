@@ -1,4 +1,6 @@
-# Task I/O
+# Pages
+
+## Task I/O
 
 There are three ways a task interfaces with its environment:
 
@@ -21,6 +23,15 @@ The `TaskSpecifier`'s job is to define:
 
 ## Finishing tasks
 
-Call `TaskServerModel.finishTask` anywhere on the server to finish the task. This will trigger.
+Call `TaskServerModel.finishTask` anywhere on the server to finish the task. This will cause the task outputs to be calculated, and then unlock tasks that depend on these outputs. (or have showAfter set, TODO implement)
 
-Just like feedback strategies, the "task unlock logic" isn't really a core part of the framework. It should be possible with
+> [!NOTE]
+> Just like feedback strategies, the "task unlock logic" isn't really a core part of the framework; it's all built with models/actions/views/requests/messages under the hood. It should therefore be relatively easy / uninvasive to have more flexible page structures than the current "legacy" behavior, e.g. pages where the task structure is assembled fully at runtime.
+
+## "Pseudo-tasks"
+
+TODO: implement
+
+If `null` is returned by the `TaskSpecifier`'s initialization method, the task will be "server-only"; i.e. a node in the task graph that's exclusively used to transform / combine task outputs before they are passed on to other tasks as inputs, and doesn't have any user interaction.
+
+The `TaskSpecifier` also specifies whether the task should use a task skeleton. The task skeleton is a collapsible panel whose header includes a help button and (if enabled) history buttons, which is standard for presenting Iltis tasks. Tasks without a skeleton are useful for widgets like a standalone graph view; they generally don't need to be "solvable".

@@ -11,5 +11,5 @@
 - [Server-side logic](./server.md)
 - [Views](./views.md)
 - [Multi-level feedback](./multi-level-feedback.md)
-- [Task I/O](./pages.md)
+- [Pages](./pages.md)
 - [Time-travelling](./time-travelling.md)

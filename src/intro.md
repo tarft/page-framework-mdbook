@@ -12,8 +12,10 @@ Currently just displays a single page. "Non-core features" like loading instance
 
 ## Installation
 
-Clone the following repos: https://ls1-gitlab.cs.tu-dortmund.de/ILTIS/pageframework
+Clone the following repos: [https://ls1-gitlab.cs.tu-dortmund.de/ILTIS/pageframework](https://ls1-gitlab.cs.tu-dortmund.de/ILTIS/pageframework)
 
 Checkout the `page-framework` branch on utils.
+
+Build in the following order: `utils`, `base`, `tasks`, `runner`
 
 For development, I recommend setting up an entirely separate IntelliJ project from the "old" framework, with separate tmp directories. Set up Jetty / GWT configurations similar to the old ones, just with `Runner` replacing all previous instances of `LogicWeb`.
