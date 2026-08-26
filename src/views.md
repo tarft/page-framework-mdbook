@@ -12,6 +12,6 @@ Since the view's state is completely dependent on the model's state, it is possi
 
 > [!NOTE]
 > 
-> The "all state is sourced from the model" requirement obviously requires a major reorganization of our widgets (e.g. the graph widget) and may also not play well with third-party libraries. For example, the `DescribePropositions` task uses a reorderable list that was previously implemented with the Sortable.js library, but Sortable.js is stateful and AFAIK doesn't give you this kind of access to its state. So, by the time I properly implement the drag-and-drop, I might have to implement this stuff from scratch and/or somehow hack it to work with `Sortable`.
+> The "all state is sourced from the model" requirement obviously requires a major reorganization of our widgets (e.g. the graph widget) and may also not play well with third-party libraries. For example, the `DescribePropositions` task uses a reorderable list that was previously implemented with the Sortable.js library, but Sortable.js is stateful and AFAIK doesn't give you this kind of access to its state. So, by the time I properly implement the drag-and-drop, I might have to implement this stuff from scratch and/or somehow hack it to work with Sortable.
 >
 > Good news for the text editor widget though: CodeMirror is very much built on this principle, so it should pose no issues to adapt to this paradigm.

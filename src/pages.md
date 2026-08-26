@@ -32,6 +32,6 @@ Call `TaskServerModel.finishTask` anywhere on the server to finish the task. Thi
 
 TODO: implement
 
-If `null` is returned by the `TaskSpecifier`'s initialization method, the task will be "server-only"; i.e. a node in the task graph that's exclusively used to transform / combine task outputs before they are passed on to other tasks as inputs, and doesn't have any user interaction.
+If `null` is returned by the `TaskSpecifier`'s initialization method in place of the client model, the task will be "server-only"; i.e. a node in the task graph that's exclusively used to transform / combine task outputs before they are passed on to other tasks as inputs, and doesn't have any user interaction.
 
 The `TaskSpecifier` also specifies whether the task should use a task skeleton. The task skeleton is a collapsible panel whose header includes a help button and (if enabled) history buttons, which is standard for presenting Iltis tasks. Tasks without a skeleton are useful for widgets like a standalone graph view; they generally don't need to be "solvable".

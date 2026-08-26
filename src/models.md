@@ -42,7 +42,7 @@ public Cell<FeedbackType> getType() {
 ```
 
 - The first argument (a unique string label) is used as the model path segment
-- The second argument (a getter function) is used to form the
+- The second argument (a getter function) is used to form the association between the field and the model structure
 - The third argument (an initial value) is just passed as the return value of `register` -- it can be `null` as long as you definitively initialize the field somewhere else at initialization, e.g. in the constructor
 
 ### (3) Collections

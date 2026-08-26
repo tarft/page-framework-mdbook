@@ -70,4 +70,5 @@ Currently, the message mechanism is implemented in quite a crude manner where, w
 
 The framework guarantees that requests/responses arrive in the order that they are sent by associating them with incrementing IDs and caching mismatched ones until the missing ones arrive. If the cache exceeds a certain limit, the server should discard the session and the client should show an error indicating that the connection was lost (TODO implement).
 
-One could think about replacing the current implementation with something based on websockets, which is arguably more suitable for this use case, but I don't think that's built into GWT and I'm hesitant to try a [library](https://code.google.com/archive/p/gwt-ws/) in case it introduces even more weird bugs than what we're already dealing with.
+> [!NOTE]
+> One could think about replacing the current implementation with something based on websockets, which is arguably more suitable for this use case, but I don't think that's built into GWT and I'm hesitant to try a [library](https://code.google.com/archive/p/gwt-ws/) in case it introduces even more weird bugs than what we're already dealing with.
