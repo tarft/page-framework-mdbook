@@ -53,7 +53,7 @@ There are some new things in `utils` that have cross-cutting importance:
 - `Promise` is an async primitive that loosely follows the JS Promise API, and is used for asynchronicity in the new framework, on both client and server.
 - `Widgetable` is an interface for serializable classes that can be converted into GWT widgets. This is used principally for feedback. 
 - The `Text` class is to be used instead of `String` whenever handling raw HTML. It implements the `Widgetable` interface.
-- The new XML framework, which lives in `utils.server.spec`, replaces both `Parsable` and our hand-written XML data loaders. It is designed to be declarative without having the limitations of `Parsable`. In addition, it's bidirectional; it can serialize objects *to* XML without requiring additional effort. There's no use for that yet but it's a good property to have.
+- The new [XML framework](./xml.md).
 
 Other than restructuring (`client`/`shared`/`server`), the libs are unchanged.
 
