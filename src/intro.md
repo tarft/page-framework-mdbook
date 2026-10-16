@@ -1,5 +1,8 @@
 # Page framework docs (2026-08-23)
 
+> [!WARNING]
+> This documentation is no longer updated, and is now hosted on our [BookStack](https://iltis-bookstack.cs.tu-dortmund.de/books/page-framework).
+
 Status:
 
 Most functionality of the `DescribePropositions` task done (formally known as just `Propositions` -- renamed to establish convention `DescribeXyz` for all NLP tasks). Currently just fixing some bugs that prevent the task from fully running.
